@@ -20,7 +20,7 @@ nav {
     /* border: 1px solid pink; */
     width: 100%;
     background-color: rgba(20, 20, 25, 1);
-    z-index: 1;
+    z-index: 10;
 }
 
 nav .contents__width {
@@ -129,6 +129,23 @@ nav .fa-solid {
     background-color: rgb(202, 172, 1);
 }
 
+/* ---------- BODY CONENT COMMON ---------- */
+
+
+.content__body .content__header>.title {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    padding: 15px;
+}
+
+.content__body .content__header>.subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(104, 103, 103);
+}
+
 /* ----------- SERVICES -------------- */
 
 #SERVICES {}
@@ -141,20 +158,7 @@ nav .fa-solid {
     margin: 100px 0;
 }
 
-.services_content>.title {
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    padding: 15px;
-}
 
-.services_content .subtitle {
-    font-size: 1.2rem;
-    font-weight: 400;
-    font-style: italic;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(104, 103, 103);
-    /* padding: 20px 0; */
-}
 
 .services_content .cards {
     display: flex;
@@ -194,6 +198,211 @@ nav .fa-solid {
     color: gray;
 }
 
+/* -------------- PORTFOLIO SECTION ------------ */
+
+.portfolio_content {
+    text-align: center;
+
+    padding: 100px 0;
+    background-color: rgb(230, 230, 230);
+}
+
+/* Common properties on Card */
+.portfolio_content .cards {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.portfolio_content .card {
+    /* border: 1px solid pink; */
+    background-color: rgb(240, 240, 240);
+
+    margin: 10px 10px;
+    max-width: 400px;
+    position: relative;
+
+}
+
+.portfolio_content .card img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+
+}
+
+.portfolio_content .card .image-foreground {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    line-height: 300px;
+    font-size: 6rem;
+    z-index: 1;
+    background-color: rgb(255, 217, 0, 0.4);
+    color: white;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.portfolio_content .card .image-foreground:hover {
+    opacity: 1;
+}
+
+.portfolio_content .card__content {
+    padding: 20px 0;
+}
+
+.portfolio_content .card__content .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.portfolio_content .card__content .description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    padding: 7px 0;
+}
+
+/* -------------- TEAM SECTION ------------ */
+
+.team_content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+    background-color: rgb(230, 230, 230);
+}
+
+.team_content .cards {
+    margin: 40px 0;
+}
+
+.team_content .cards img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 8px solid rgb(200, 200, 200);
+    margin-bottom: 20px;
+}
+
+.team_content .cards .name {
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.team_content .cards .position {
+
+    color: rgb(100, 100, 100);
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px 0;
+}
+
+.team_content .cards .sns {
+    margin: 10px 0;
+}
+
+.team_content .cards .sns i {
+    font-size: 1.2rem;
+    width: 2.7rem;
+    height: 2.7rem;
+    line-height: 2.7rem;
+    background-color: rgb(60, 60, 60);
+    color: white;
+    border-radius: 50%;
+    margin: 0 10px;
+    box-sizing: unset;
+}
+
+.team_content .cards .sns i:active {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border: 5px solid rgb(120, 120, 120);
+}
+
+/* -------------- ABOUT SECTION ------------ */
+
+.about_content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0;
+}
+
+/* -------------- CONTACT SECTION ------------ */
+
+.contact_content {
+    position: relative;
+}
+
+
+.background__front {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0;
+    background-image: url('https://img.freepik.com/premium-vector/pixel-world-map-dotted-world-map-vector-isolated-white-background-eps-10_399089-1294.jpg?w=2000');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    z-index: 1;
+}
+
+.background_gradient {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: linear-gradient(to top,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 60%,
+            rgba(0, 0, 0, 0.8) 100%);
+    top: 0;
+    width: 100%;
+    height: 600px;
+    z-index: 0;
+}
+
+.contact_content .content__header {
+    padding: 80px 0;
+    z-index: 2;
+}
+
+.contact_content .content__header .title {
+    color: white;
+}
+
+.contact_content .content__header .subtitle {
+    color: rgb(190, 186, 186);
+}
+
+@media screen and (min-width:500px) {
+
+    /* ---------- PORTFOLIO --------- */
+    .portfolio_content .cards {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .portfolio_content .card img {
+        /* object-fit: cover; */
+        width: 250px;
+        height: 200px;
+    }
+
+    .portfolio_content .card .image-foreground {
+        height: 200px;
+        line-height: 200px;
+    }
+}
+
 @media screen and (min-width:789px) {
 
 
@@ -227,6 +436,17 @@ nav .fa-solid {
         flex-direction: row;
     }
 
+    /* ---------- PORTFOLIO --------- */
+    .portfolio_content .card img {
+        /* object-fit: cover; */
+        width: 350px;
+        height: 300px;
+    }
+
+    .portfolio_content .card .image-foreground {
+        height: 300px;
+        line-height: 300px;
+    }
 }
 
 
@@ -234,7 +454,7 @@ nav .fa-solid {
 @media screen and (min-width:1024px) {
     nav {
 
-        background-color: rgba(20, 20, 25, 0);
+        background-color: rgba(20, 20, 25, 0.4);
         transition: all 0.5s ease-in;
 
     }
@@ -271,6 +491,23 @@ nav .fa-solid {
         max-width: 100%;
     }
 
+    /* ---------- PORTFOLIO --------- */
+    .portfolio_content .cards {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+    }
+
+    .portfolio_content .card img {
+        /* object-fit: cover; */
+        width: 300px;
+        height: 200px;
+    }
+
+    .portfolio_content .card .image-foreground {
+        height: 200px;
+        line-height: 200px;
+    }
+
     @keyframes nav_animation_logo {
         from {
             top: -10px;
@@ -295,5 +532,20 @@ nav .fa-solid {
             right: 0px;
         }
 
+    }
+}
+
+@media screen and (min-width:1290px) {
+    /* ---------- PORTFOLIO --------- */
+
+    .portfolio_content .card img {
+        /* object-fit: cover; */
+        width: 400px;
+        height: 400px;
+    }
+
+    .portfolio_content .card .image-foreground {
+        height: 400px;
+        line-height: 400px;
     }
 }
