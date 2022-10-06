@@ -7,8 +7,11 @@ yarn-error.log*
 firebase-debug.log*
 firebase-debug.*.log*
 
+build/
+public/
 # Firebase cache
 .firebase/
+
 
 # Firebase config
 
