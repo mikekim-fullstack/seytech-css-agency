@@ -279,10 +279,18 @@ nav .fa-solid {
 }
 
 .team_content .cards {
-    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0px;
 }
 
-.team_content .cards img {
+.team_content .card {
+    margin-bottom: 60px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.team_content .card>img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -290,13 +298,13 @@ nav .fa-solid {
     margin-bottom: 20px;
 }
 
-.team_content .cards .name {
+.team_content .card .name {
 
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.team_content .cards .position {
+.team_content .card .position {
 
     color: rgb(100, 100, 100);
     font-size: 1.2rem;
@@ -305,12 +313,22 @@ nav .fa-solid {
     padding: 5px 0;
 }
 
-.team_content .cards .sns {
+.team_content .card .sns {
     margin: 10px 0;
 }
 
-.team_content .cards .sns i {
+.team_content .card .sns .radio {
+    /* text-decoration: underline; */
+    position: relative;
+    /* border: 5px solid rgb(220, 120, 120); */
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+.team_content .card .sns .radio i {
     font-size: 1.2rem;
+
     width: 2.7rem;
     height: 2.7rem;
     line-height: 2.7rem;
@@ -321,11 +339,40 @@ nav .fa-solid {
     box-sizing: unset;
 }
 
-.team_content .cards .sns i:active {
-    width: 2.5rem;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    border: 5px solid rgb(120, 120, 120);
+.team_content .cards .sns input[type=radio] {
+    position: absolute;
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: auto;
+    top: 0;
+
+    left: 0px;
+    /* border: 1px dashed pink; */
+
+    /* line-height: 3rem; */
+
+    opacity: 0;
+}
+
+.team_content .cards .sns input[type=radio]+i {
+    cursor: pointer;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    margin: 0px auto;
+    transition: all 0.2s ease;
+}
+
+.team_content .cards .sns input[type=radio]:checked+i {
+    outline: 5px solid orange;
+}
+
+.content__body .content__footer>.subtitle {
+    padding: 0 10%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(104, 103, 103);
 }
 
 /* -------------- ABOUT SECTION ------------ */
@@ -506,6 +553,14 @@ nav .fa-solid {
     .portfolio_content .card .image-foreground {
         height: 200px;
         line-height: 200px;
+    }
+
+    /* ------------TEAM ----------- */
+    .team_content .cards {
+
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
     }
 
     @keyframes nav_animation_logo {
