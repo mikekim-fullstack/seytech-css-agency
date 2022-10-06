@@ -360,25 +360,12 @@ nav .fa-solid {
     cursor: pointer;
     margin-right: 0.5rem;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     margin: 0px auto;
     transition: all 0.2s ease;
-
-    /* -moz-outline-radius: 5px solid orange; */
 }
 
 .team_content .cards .sns input[type=radio]:checked+i {
-    /* outline: 5px solid orange;
-    -moz-outline: 5px solid orange;
-    -webkit-outline: 5px solid orange;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%; */
-    /* border: 5px solid orange; */
-    /* outline: 5px solid orange; */
-    /* box-sizing: content-box; */
-    color: orange;
+    outline: 5px solid orange;
 }
 
 .content__section__body .content__footer>.subtitle {
@@ -592,9 +579,7 @@ footer .sns input[type=radio]+i {
 }
 
 footer .sns input[type=radio]:checked+i {
-    /* !! outline is not working in Safari !! */
-    /* outline: 5px solid orange; */
-    color: orange;
+    outline: 5px solid orange;
 }
 
 
