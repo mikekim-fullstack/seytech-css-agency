@@ -32,7 +32,6 @@ nav .contents__width {
 .nav__contents {
     display: flex;
     justify-content: space-between;
-    /* width: 100%; */
 }
 
 
@@ -130,15 +129,18 @@ nav .fa-solid {
 }
 
 /* ---------- BODY CONENT COMMON ---------- */
+.content__section__body {
 
+    margin-bottom: 0;
+}
 
-.content__body .content__header>.title {
+.content__section__body .content__header>.title {
     text-transform: uppercase;
     font-size: 2.5rem;
     padding: 15px;
 }
 
-.content__body .content__header>.subtitle {
+.content__section__body .content__header>.subtitle {
     font-size: 1.2rem;
     font-weight: 400;
     font-style: italic;
@@ -366,7 +368,7 @@ nav .fa-solid {
     outline: 5px solid orange;
 }
 
-.content__body .content__footer>.subtitle {
+.content__section__body .content__footer>.subtitle {
     padding: 0 10%;
     font-size: 1.2rem;
     font-weight: 400;
@@ -402,6 +404,9 @@ nav .fa-solid {
 
 .contact_content {
     position: relative;
+    margin-bottom: 0;
+    border: 1px solid;
+    /* border-color: rgba(0, 0, 0, 0); */
 }
 
 
@@ -507,6 +512,78 @@ nav .fa-solid {
     color: white;
 }
 
+/* ------------------- FOOTER ------------------ */
+
+footer .footer__content {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* border: 1px solid green; */
+}
+
+footer a {
+    color: rgb(255, 177, 31);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: rgb(193, 134, 24);
+}
+
+footer .link {}
+
+footer .sns {
+    margin: 20px 0;
+    /* border: 1px solid green; */
+    text-align: center;
+}
+
+footer .sns .radio {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+footer .sns .radio i {
+    font-size: 1.2rem;
+
+    width: 2.7rem;
+    height: 2.7rem;
+    line-height: 2.7rem;
+    background-color: rgb(60, 60, 60);
+    color: white;
+    border-radius: 50%;
+    margin: 0 10px;
+    box-sizing: unset;
+}
+
+footer .sns input[type=radio] {
+    position: absolute;
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: auto;
+    top: 0;
+    left: 0px;
+    opacity: 0;
+}
+
+footer .sns input[type=radio]+i {
+    cursor: pointer;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    margin: 0px auto;
+    transition: all 0.2s ease;
+}
+
+footer .sns input[type=radio]:checked+i {
+    outline: 5px solid orange;
+}
+
+
+/* ------------------- RESPONSIVENESS ------------------ */
 @media screen and (min-width:550px) {
 
     /* ---------- PORTFOLIO --------- */
@@ -581,7 +658,6 @@ nav .fa-solid {
     /* ---------- ABOUT --------- */
     .about_content .content__body {
         grid-template-columns: repeat(4, auto);
-        /* grid-template-rows: repeat(2, auto); */
     }
 
     .about_content .content__body img {
@@ -596,12 +672,7 @@ nav .fa-solid {
 
         grid-template-columns: auto auto;
         grid-gap: 20px;
-
-        /* border: 2px dashed navy; */
-
-        /* max-width: 700px; */
         margin: 0 auto;
-
     }
 
     .contact_content .content__body input {
@@ -694,6 +765,21 @@ nav .fa-solid {
         width: 220px;
         margin: 10px 8px;
     }
+
+    /* ------------------- FOOTER ------------------ */
+
+    footer .footer__content {
+        margin: 20px 15%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    /* footer .footer__content * {
+        margin: 0 20px;
+    } */
 
     @keyframes nav_animation_logo {
         from {
