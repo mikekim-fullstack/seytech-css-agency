@@ -378,10 +378,24 @@ nav .fa-solid {
 /* -------------- ABOUT SECTION ------------ */
 
 .about_content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+
     margin: 100px 0;
+}
+
+.about_content .content__body {
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.about_content .content__body img {
+    /* border: 1px solid pink; */
+    object-fit: cover;
+    margin: 10px 20px;
 }
 
 /* -------------- CONTACT SECTION ------------ */
@@ -400,7 +414,7 @@ nav .fa-solid {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 600px;
+    height: 100%;
     z-index: 1;
 }
 
@@ -409,11 +423,11 @@ nav .fa-solid {
     background-color: rgba(0, 0, 0, 0.6);
     background-image: linear-gradient(to top,
             rgba(0, 0, 0, 0.8) 0%,
-            rgba(0, 0, 0, 0) 60%,
+            rgba(0, 0, 0, 0) 50%,
             rgba(0, 0, 0, 0.8) 100%);
     top: 0;
     width: 100%;
-    height: 600px;
+    height: 100%;
     z-index: 0;
 }
 
@@ -430,7 +444,70 @@ nav .fa-solid {
     color: rgb(190, 186, 186);
 }
 
-@media screen and (min-width:500px) {
+.contact_content form {
+    padding: 80px 0;
+    z-index: 2;
+    text-align: center;
+    padding: 10px 40px;
+}
+
+.contact_content .content__body {
+    display: grid;
+    grid-gap: 10px;
+    /* grid-template-columns: auto auto; */
+    grid-template-rows: repeat(4, auto);
+    /* justify-content: space-between; */
+    /* border: 2px dashed navy; */
+    justify-content: center;
+
+}
+
+.contact_content .content__body input {
+    /* display: block; */
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px 15px;
+    /* margin: 20px 0; */
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    height: 4rem;
+}
+
+.contact_content .content__body textarea {
+    /* display: block; */
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px 15px;
+    margin: 0px 0;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    resize: vertical;
+    height: 233px;
+    max-height: 300px;
+}
+
+.contact_content .content__body input::placeholder,
+.contact_content .content__body textarea::placeholder {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(170, 170, 170);
+}
+
+.contact_content form button {
+    margin: 40px 0;
+    padding: 15px 25px;
+    background-color: var(--theme-color);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+}
+
+@media screen and (min-width:550px) {
 
     /* ---------- PORTFOLIO --------- */
     .portfolio_content .cards {
@@ -447,6 +524,12 @@ nav .fa-solid {
     .portfolio_content .card .image-foreground {
         height: 200px;
         line-height: 200px;
+    }
+
+    /* ---------- ABOUT --------- */
+    .about_content .content__body {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
     }
 }
 
@@ -494,6 +577,47 @@ nav .fa-solid {
         height: 300px;
         line-height: 300px;
     }
+
+    /* ---------- ABOUT --------- */
+    .about_content .content__body {
+        grid-template-columns: repeat(4, auto);
+        /* grid-template-rows: repeat(2, auto); */
+    }
+
+    .about_content .content__body img {
+        /* border: 1px solid pink; */
+        object-fit: cover;
+        width: 170px;
+        margin: 10px 8px;
+    }
+
+    /* ----------- CONTACT -------- */
+    .contact_content .content__body {
+
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+
+        /* border: 2px dashed navy; */
+
+        /* max-width: 700px; */
+        margin: 0 auto;
+
+    }
+
+    .contact_content .content__body input {
+        width: 100%;
+    }
+
+    .contact_content .textarea {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        height: 333px;
+    }
+
+
+
 }
 
 
@@ -563,6 +687,14 @@ nav .fa-solid {
         margin: 0 auto;
     }
 
+    /* ---------- ABOUT --------- */
+    .about_content .content__body img {
+        /* border: 1px solid pink; */
+        object-fit: cover;
+        width: 220px;
+        margin: 10px 8px;
+    }
+
     @keyframes nav_animation_logo {
         from {
             top: -10px;
@@ -602,5 +734,13 @@ nav .fa-solid {
     .portfolio_content .card .image-foreground {
         height: 400px;
         line-height: 400px;
+    }
+
+    /* ---------- ABOUT --------- */
+    .about_content .content__body img {
+        /* border: 1px solid pink; */
+        object-fit: cover;
+        width: 270px;
+        margin: 10px 10px;
     }
 }
